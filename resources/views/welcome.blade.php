@@ -23,15 +23,9 @@
                         <div class="full-bg-img flex-center white-text">
                             <ul class="animated fadeIn col-10 list-unstyled">
                                 <li>
-                                    <p class="h1 red-text mb-4 mt-5">
-                                        <strong>Sale off 30% on every saturday!</strong>
+                                    <p class="h1 blue-text mb-4 mt-5">
+                                        <strong>MEDICAL PRESCRIPTION MANAGEMENT WITH PHARMANCIES</strong>
                                     </p>
-                                </li>
-                                <li>
-                                    <h5 class="h5-responsive dark-grey-text font-weight-bold mb-5">Tempora incidunt ut labore et dolore veritatis et quasi architecto beatae</h5>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" class="btn btn-danger btn-rounded" rel="nofollow">See more!</a>
                                 </li>
                             </ul>
                         </div>
@@ -49,16 +43,16 @@
                         <div class="full-bg-img flex-center white-text">
                             <ul class="animated fadeIn col-10 list-unstyled">
                                 <li>
-                                    <p class="h1 dark-grey-text mb-4">
-                                        <strong>Nemo enim ipsam voluptatem quia voluptas sit</strong>
+                                    <p class="h5 red-text mb-4">
+                                        <strong>PROJECT OBJECTIVE</strong>
                                     </p>
                                 </li>
                                 <li>
-                                    <h5 class="h5-responsive dark-grey-text font-weight-bold mb-5">Tempora incidunt ut labore et dolore veritatis et quasi architecto beatae</h5>
+                                    <h5 class="h5-responsive blue-text font-weight-bold mb-5">The goals of providing medical prescription were to cure disease, to improve quality of life to
+                                        decrease the risk of mortality and to improve functioning
+                                    </h5>
                                 </li>
-                                <li>
-                                    <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-primary btn-rounded" rel="nofollow">Read more</a>
-                                </li>
+
                             </ul>
                         </div>
                         <!-- /.Caption -->
@@ -75,12 +69,16 @@
                         <div class="full-bg-img flex-center white-text">
                             <ul class="animated fadeIn col-md-10 text-center text-md-right list-unstyled">
                                 <li>
-                                    <p class="h1 blue-text mb-4 mt-5 pr-lg-5">
-                                        <strong>Sale off 20% on every headphones!</strong>
+                                    <p class="h1 red-text mb-4 mt-5 pr-lg-5">
+                                        <strong>CONTINUE OBJECTIVE</strong>
                                     </p>
                                 </li>
                                 <li>
-                                    <h5 class="h5-responsive dark-grey-text font-weight-bold mb-5 pr-lg-5">Tempora incidunt ut labore et dolore veritatis et quasi</h5>
+                                    <h5 class="h5-responsive blue-text font-weight-bold mb-5 pr-lg-5">With the system the patients or
+                                        Caregivers will be having the ability of knowing the location of nearest pharmacy which
+                                        has the needed medicine by measuring the distance from the current destination to that
+                                        Needed pharmacy according to the physician’s prescription
+                                    </h5>
                                 </li>
                             </ul>
                         </div>

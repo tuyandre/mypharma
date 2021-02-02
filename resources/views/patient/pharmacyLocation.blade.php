@@ -50,7 +50,7 @@
             // test = new Array(test);
             var myJSONString = test,
                 myObject = JSON.parse(myJSONString);
-            const uluru = { lat: myObject.latitude, lng: myObject.longitude };
+            const uluru = { lat: -1.9660799999999998, lng: 30.107238400000004 };
             // The map, centered at Uluru
             const map = new google.maps.Map(document.getElementById("pharmacyMap"), {
                 zoom: 15,

@@ -9,7 +9,7 @@
     <meta name="keywords" content="Ethical Research Solution">
     <meta name="description" content="Ethical Research Solution">
     <meta name="robots" content="noindex,nofollow">
-    <title>@yield('title') | MyPharma</title>
+    <title>@yield('title') | MPMP</title>
     <!-- Favicon icon -->
     <!-- Favicon and Touch Icons -->
     <link href="{{asset('/assets/img/pharmacy.jpg')}}" rel="shortcut icon" type="image/png">

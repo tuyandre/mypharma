@@ -33,10 +33,10 @@
             <!--First column-->
             <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
                 <h6 class="text-uppercase font-weight-bold">
-                    <strong>Mypharma</strong>
+                    <strong>MPMP</strong>
                 </h6>
                 <hr class="blue mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>MEDICAL PRESCRIPTION MANAGEMENT WITH PHARMANCIES.</p>
             </div>
             <!--/.First column-->
 

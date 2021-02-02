@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>myPharma</title>
-
+    <title>MPMP</title>
+    <link href="{{asset('/assets/img/pharmacy.jpg')}}" rel="shortcut icon" type="image/png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 
