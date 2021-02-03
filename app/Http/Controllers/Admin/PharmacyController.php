@@ -90,4 +90,29 @@ class PharmacyController extends Controller
         $insurance = Insurance::with(['Pharmacy'])->get();
         return response()->json(['insurance' => $insurance], 200);
     }
+    public function show($id){
+        $pha=Pharmacy::find($id);
+        if ($pha){
+            return response()->json(['pharmacy' => $pha], 200);
+        }
+    }
+    public function update(Request $request){
+        $pha=Pharmacy::find($request['id']);
+        if ($pha){
+            $pha->name=$request['name'];
+            $pha->description=$request['description'];
+            $pha->location=$request['location'];
+            $pha->latitude=$request['latitude'];
+            $pha->longitude=$request['longitude'];
+            $pha->save();
+            return response()->json(['pharmacy' => "ok"], 200);
+        }
+    }
+    public function delete($id){
+        $pha=Pharmacy::find($id);
+        if ($pha){
+            $pha->delete();
+            return response()->json(['pharmacy' => 'ok'], 200);
+        }
+    }
 }

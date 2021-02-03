@@ -20,4 +20,8 @@ class Pharmacy extends Model
     {
         return $this->hasMany('App\Medecine');
     }
+    public function Order()
+    {
+        return $this->hasMany('App\Order');
+    }
 }

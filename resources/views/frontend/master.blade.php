@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+    <meta name="auth-check" content="{{ (Auth::check()) ? true : false }}">
     <title>MPMP</title>
     <link href="{{asset('/assets/img/pharmacy.jpg')}}" rel="shortcut icon" type="image/png">
     <!-- Font Awesome -->
@@ -67,6 +67,10 @@
     // SideNav Initialization
     $(".button-collapse").sideNav();
 </script>
+<script src="{{asset('/frontend/carts/shopingCart.js')}}"></script>
+<script src="{{asset('sweetalert2/package/dist/sweetalert2.js')}}"></script>
+<script src="{{asset('sweetalert2/package/dist/sweetalert2.min.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @yield('js')
 </body>
 

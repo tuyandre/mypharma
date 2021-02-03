@@ -77,8 +77,15 @@
 
                                 <div class="row mt-3 mb-4">
                                     <div class="col-md-12 text-center text-md-left text-md-right">
-                                        <button class="btn btn-primary btn-rounded">
-                                            <i class="fas fa-cart-plus mr-2" aria-hidden="true"></i> Add to cart</button>
+                                        @if(Auth::check())
+                                            <button type="button" data-image="{{$medicine->image}}" data-pharmacy="{{$medicine->pharmacy_id}}"
+                                                    data-product="{{$medicine->id}}" data-size="{{$medicine->quantity}}" data-price="{{$medicine->price}}" data-name="{{$medicine->name}}" data-display="{{$medicine->name}}"
+                                                    class="add-to-cart btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+
+                                        @else
+                                        <a href="{{url('/login')}}" class="btn btn-primary btn-rounded">
+                                            <i class="fas fa-cart-plus mr-2" aria-hidden="true"></i> Add to cart</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

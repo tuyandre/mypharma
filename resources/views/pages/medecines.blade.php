@@ -124,15 +124,29 @@
                                         <!--Card footer-->
                                         <div class="card-footer pb-0">
                                             <div class="row mb-0">
-                                            <span class="float-left">
+                                                @if(Auth::check())
+                                            <span class="float-left" style="margin-top: 15px">
                                                 <strong>{{$medicine->price}}Rwf</strong>
                                             </span>
-                                                <span class="float-right">
+                                                <span style="width: 20px"></span>
+                                                <span class="float-right" >
 
-                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                                    <i class="fas fa-shopping-cart ml-3"></i>
-                                                </a>
+                                                        <button type="button" data-image="{{$medicine->image}}" data-pharmacy="{{$medicine->pharmacy_id}}"
+                                                                data-product="{{$medicine->id}}" data-size="{{$medicine->quantity}}" data-price="{{$medicine->price}}" data-name="{{$medicine->name}}" data-display="{{$medicine->name}}"
+                                                                class="add-to-cart btn btn-primary"><i class="fa fa-shopping-cart"></i> Add To Cart</button>
+                                                </span>
+                                                    @else
+                                                    <span class="float-left" >
+                                                <strong>{{$medicine->price}}Rwf</strong>
                                             </span>
+                                                    <span style="width: 150px"></span>
+                                                    <span class="float-right" >
+                                                    <a class="" href="{{url('/login')}}" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                        <i class="fas fa-shopping-cart ml-3"></i>
+                                                    </a>
+                                                    </span>
+                                                    @endif
+
                                             </div>
                                         </div>
 

@@ -31,7 +31,19 @@
                             </tr>
                             </thead>
                             <tbody>
-
+                            <?php
+                                $insurances=\App\Pharmacy::with(['Insurance'])->get();
+                            ?>
+                            @foreach($insurances as $insurance)
+                            <tr>
+                                <td>{{$insurance->name}}</td>
+                                <td>
+                                    @foreach($insurance->insurance as  $data)
+                                        {{$data->name}},
+                                    @endforeach
+                                </td>
+                            </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -62,9 +74,11 @@
         }
 
         $(document).ready(function () {
-
+            $(document).ready(function() {
+                $('#manageTable').DataTable();
+            } );
 //initialize data table
-            myFunc();
+//             myFunc();
         });
     </script>
 

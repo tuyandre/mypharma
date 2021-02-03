@@ -67,4 +67,10 @@ class FrontController extends Controller
 //        return response()->json(['results' => $pharmacies], 200);
         return view('patient.pharmacyLocation')->with('pharmacy',$pharmacies);
     }
+    public function cart(){
+        return view('pages.cart');
+    }
+    public function checkout(Request $request){
+        return view('pages.checkout');
+    }
 }

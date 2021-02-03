@@ -12,4 +12,8 @@ class Medecine extends Model
     {
         return $this->belongsTo('App\Pharmacy', 'pharmacy_id');
     }
+    public function Sold()
+    {
+        return $this->hasMany('App\Sold');
+    }
 }

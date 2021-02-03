@@ -73,7 +73,7 @@
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('admin.medecines.medecines')}}" aria-expanded="false">
-                        <i class="fa fa-cogs"></i>
+                        <i class="fa fa-medkit" aria-hidden="true"></i>
                         <span class="hide-menu">Medecines</span>
                     </a>
                 </li>

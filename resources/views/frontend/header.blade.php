@@ -24,10 +24,16 @@
                         </a>
                     </li>
                     @if(Auth()->check())
+                        <li class="nav-item ml-3">
+                            <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="{{route('frontend.patient.order')}}">
+                                <i class="fas fa-shopping-bag blue-text"></i> My Orders</a>
+                        </li>
                     <li class="nav-item ml-3">
-                        <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="#">
-                            <i class="fas fa-cog blue-text"></i> Settings</a>
+                        <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="{{route('frontend.cart')}}">
+                            <span class="total-count badge badge-pill red"></span> <i class="fa fa-shopping-cart "></i>
+                        </a>
                     </li>
+
                     <li class="nav-item dropdown ml-3">
                         <a class="nav-link dropdown-toggle waves-effect waves-light dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-user blue-text"></i> {{Auth::user()->name}} </a>

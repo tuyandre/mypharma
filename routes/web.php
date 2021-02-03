@@ -12,6 +12,22 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('auth/user/data', function () {
+    return Auth::user();
+});
+
+
+Route::get('/cart', 'FrontController@cart')->name('frontend.cart');
+Route::get('/patient/order', 'Patient\OrderController@myOrder')->name('frontend.patient.order');
+Route::get('/patient/cancel/order/{id}', 'Patient\OrderController@cancelOrder')->name('frontend.patient.cancelOrder');
+Route::post('/checkout/pending',
+    'Patient\OrderController@checkoutPending')
+    ->name('frontend.checkout.pending');
+
+Route::get('/checkout', 'FrontController@checkout')->name('frontend.checkout');
+
+
+
 Route::get('/about_us','FrontController@about_us')->name('frontend.about_us');
 Route::get('/admin/start/register','Admin\AuthController@getRegister')->name('admin.frontend.register');
 Route::post('/admin/start/store','Admin\AuthController@registerAdmin')->name('admin.frontend.store');
