@@ -191,16 +191,49 @@ Route::group(['prefix' => '/home/'], function () {
         'uses' => 'Pharmacist\MedecineController@registerPharmacist',
         'as' => 'pharmacist.insurance.registerPharmacist'
     ]);
-    Route::get('pharmacy/medecine/show/{id}', [
+    Route::get('pharmacy/medicine/show/{id}', [
         'uses' => 'Pharmacist\MedecineController@show',
         'as' => 'pharmacist.medecine.show'
     ]);
-    Route::delete('/pharmacy/medecine/delete/{id}', [
+    Route::delete('/pharmacy/medicine/delete/{id}', [
         'uses' => 'Pharmacist\MedecineController@delete',
         'as' => 'pharmacist.medecine.delete'
     ]);
-    Route::post('update/pharmacy/medecine', [
+    Route::post('update/pharmacy/medicine', [
         'uses' => 'Pharmacist\MedecineController@update',
-        'as' => 'pharmacist.medecine.update'
+        'as' => 'pharmacist.medicine.update'
     ]);
+
+
+
+    Route::post('post/pharmacy/medicine/stock', [
+        'uses' => 'Pharmacist\StockController@store',
+        'as' => 'pharmacist.stock.save'
+    ]);
+
+
+
+
+
+
+
+
+    Route::get('pharmacy/order', [
+        'uses' => 'Pharmacist\OrderController@index',
+        'as' => 'pharmacist.order.index'
+    ]);
+    Route::get('get/pharmacy/order', [
+        'uses' => 'Pharmacist\OrderController@getOrders',
+        'as' => 'pharmacist.order.getOrders'
+    ]);
+
+    Route::get('pharmacy/order/detail/{id}', [
+        'uses' => 'Pharmacist\OrderController@detail',
+        'as' => 'pharmacist.order.detail'
+    ]);
+    Route::put('/pharmacy/order/complete/{id}', [
+        'uses' => 'Pharmacist\OrderController@complete',
+        'as' => 'pharmacist.order.complete'
+    ]);
+
 });

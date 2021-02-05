@@ -86,17 +86,22 @@
                 @else
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('pharmacist.medecine.index')}}" aria-expanded="false">
-                            <i class="fa fa-cogs"></i>
+                            <i class="fa fa-medkit blue-text" aria-hidden="true"></i>
                             <span class="hide-menu">Medecines</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('pharmacist.insurance.index')}}" aria-expanded="false">
-                            <i class="fa fa-cogs"></i>
+                            <i class="fas fa-umbrella"></i>
                             <span class="hide-menu">Insurances</span>
                         </a>
                     </li>
-
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('pharmacist.order.index')}}" aria-expanded="false">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="hide-menu">Orders</span>
+                        </a>
+                    </li>
 
                 @endif
 

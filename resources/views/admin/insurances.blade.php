@@ -60,18 +60,6 @@
         var defaultUrl = "{{ route('admin.insurances.getInsurances') }}";
         var table;
         var manageTable = $("#manageTable");
-        function myFunc() {
-            table = manageTable.DataTable({
-                ajax: {
-                    url: defaultUrl,
-                    dataSrc: 'insurance'
-                },
-                columns: [
-                    {data: 'pharmacy.name'},
-                    {data: 'name'},
-                ]
-            });
-        }
 
         $(document).ready(function () {
             $(document).ready(function() {

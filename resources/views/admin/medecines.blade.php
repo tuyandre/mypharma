@@ -61,7 +61,13 @@
                 columns: [
                     {data: 'pharmacy.name'},
                     {data: 'name'},
-                    {data: 'image'},
+                    {data: 'image',
+                        render: function (data, type, row) {
+                            return"<img src='/backend/medecines/"+row.image+"' style='width: 45px'>";
+
+
+                        }
+                    },
                     {data: 'description'},
                     {data: 'price'},
                     {data: 'quantity'},

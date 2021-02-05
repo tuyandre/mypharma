@@ -16,4 +16,8 @@ class Medecine extends Model
     {
         return $this->hasMany('App\Sold');
     }
+    public function Stock()
+    {
+        return $this->hasMany('App\Stock');
+    }
 }

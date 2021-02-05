@@ -34,4 +34,27 @@ class InsuranceController extends Controller
             return response()->json(['insurance' => "ok"], 200);
         }
     }
+    public function show($id){
+        $insurance=Insurance::find($id);
+        if ($insurance){
+            return response()->json(['insurance' => $insurance], 200);
+        }
+    }
+    public function update(Request $request){
+        $insurance=Insurance::find($request['id']);
+        if ($insurance){
+            $insurance->name=$request['name'];
+            $insurance->save();
+            return response()->json(['insurance' => 'ok'], 200);
+        }else{
+            return response()->json(['insurance' => 'not'], 404);
+        }
+    }
+    public function delete($id){
+        $insurance=Insurance::find($id);
+        if ($insurance){
+            $insurance->delete();
+            return response()->json(['insurance' => 'ok'], 200);
+        }
+    }
 }

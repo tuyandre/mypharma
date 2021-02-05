@@ -13,10 +13,12 @@ class AddPharmacyIdToOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->unsignedBigInteger('pharmacy_id')->nullable();
-            $table->foreign('pharmacy_id')->references('id')->on('pharmacies')->onDelete('cascade');
-        });
+        if (!Schema::hasColumn('orders', 'pharmacy_id')) {
+            Schema::table('orders', function (Blueprint $table) {
+                $table->unsignedBigInteger('pharmacy_id')->nullable();
+                $table->foreign('pharmacy_id')->references('id')->on('pharmacies')->onDelete('cascade');
+            });
+        }
     }
 
     /**
@@ -26,8 +28,10 @@ class AddPharmacyIdToOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn('pharmacy_id');
-        });
+        if (Schema::hasColumn('orders', 'pharmacy_id')){
+            Schema::table('orders', function (Blueprint $table) {
+                $table->dropColumn('pharmacy_id');
+            });
+        }
     }
 }

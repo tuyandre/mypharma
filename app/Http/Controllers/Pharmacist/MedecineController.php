@@ -22,6 +22,24 @@ class MedecineController extends Controller
         $medecine = Medecine::with(['Pharmacy'])->get();
         return response()->json(['medecine' => $medecine], 200);
     }
+    public function show($id){
+        $medicine=Medecine::find($id);
+        if ($medicine){
+            return response()->json(['medicine' => $medicine], 200);
+        }
+    }
+    public function update(Request $request){
+        $medicine=Medecine::find($request['id']);
+        if ($medicine){
+            $medicine->name=$request['name'];
+            $medicine->price=$request['price'];
+            $medicine->description=$request['description'];
+            $medicine->save();
+            return response()->json(['medicine' => 'ok'], 200);
+        }else{
+            return response()->json(['medicine' => 'not'], 404);
+        }
+    }
     public function store(Request $request){
         $pharma=Pharmacy::where('user_id','=',Auth::user()->id)->first();
         $file=$request->file('photo');
@@ -37,6 +55,15 @@ class MedecineController extends Controller
         ]);
         if ($newMedecine){
             return response()->json(['medicine' => "ok"], 200);
+        }
+    }
+
+
+    public function delete($id){
+        $medecine=Medecine::find($id);
+        if ($medecine){
+            $medecine->delete();
+            return response()->json(['medicine' => 'ok'], 200);
         }
     }
 }
