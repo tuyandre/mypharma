@@ -16,8 +16,11 @@
             <div class="card material-card">
                 <h5 class="card-title text-uppercase p-3 bg-info text-white mb-0">
                     Pharmacies
+
                     <button class="btn btn-success btn-flat btn-sm add_pharmacy" style="float: right">
                         <i class="fa fa-plus"></i>Add Pharmacy</button>
+                    <a href="https://www.google.com/maps/" target="_blank" class="btn btn-primary btn-flat btn-sm" style="float: right;margin-right: 50px" >
+                        <i class="fa fa-search-location"></i>Search Pharmacy Coordinate</a>
                 </h5>
 
                 <div class="p-3">

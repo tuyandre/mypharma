@@ -7,6 +7,7 @@ use App\Medecine;
 use App\Pharmacy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class MedecineController extends Controller
 {
@@ -42,6 +43,11 @@ class MedecineController extends Controller
     }
     public function store(Request $request){
         $pharma=Pharmacy::where('user_id','=',Auth::user()->id)->first();
+        $check=Medecine::where('pharmacy_id','=',$pharma->id)->where('name','=',$request['name'])->first();
+        if ($check){
+            return response()->json(['medicine' => "exist"], 200);
+        }
+
         $file=$request->file('photo');
         $filename =time().$file->getClientOriginalName();
         $file->move(public_path('backend/medecines'),$filename);

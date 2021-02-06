@@ -54,12 +54,11 @@ class FrontController extends Controller
                     });
 
             })
-            ->having("distance", "<=", $max_distance)
             ->orderBy("distance")
             ->groupBy("medecines.id")
             ->get();
         return view('patient.resultMedecine')->with('medicines',$nearest);
-
+//        ->having("distance", "<=", $max_distance)
         return response()->json(['results' => $nearest], 200);
     }
     public function pharmacyLocation($pharmacy){

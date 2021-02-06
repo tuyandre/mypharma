@@ -18,7 +18,7 @@ class CreateInsurancesTable extends Migration
             $table->unsignedBigInteger('pharmacy_id');
             $table->string('name');
             $table->timestamps();
-
+            $table->unique(['pharmacy_id', 'name']);
             $table->foreign('pharmacy_id')->references('id')->on('pharmacies');
         });
     }

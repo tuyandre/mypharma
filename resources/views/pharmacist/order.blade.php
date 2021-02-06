@@ -73,7 +73,7 @@
                                 "' data-url='/home/pharmacy/order/complete/" + row.id + "'> <i class='fa fa-check-square'></i>Complete</button>";
 
                         }else{
-                            return "<button  data-url='/home/pharmacy/order/detail/" + row.id + "' class='btn btn-info btn-sm btn-flat js-edit' data-id='" + data +
+                            return "<button  href='/home/pharmacy/order/detail/" + row.id + "' class='btn btn-info btn-sm btn-flat js-edit' data-id='" + data +
                                 "' > <i class='fa fa-eye'></i>View</button>" ;
 
                         }

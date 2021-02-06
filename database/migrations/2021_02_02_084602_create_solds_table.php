@@ -22,6 +22,7 @@ class CreateSoldsTable extends Migration
             $table->double('price');
             $table->double('cost');
             $table->timestamps();
+            $table->unique(['order_id', 'user_id','medecine_id']);
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
             $table->foreign('medecine_id')->references('id')->on('medecines')->onDelete('cascade');
         });

@@ -290,7 +290,23 @@
                                 $(this).remove();
                             });
                         });
-                    }else {
+                    }else if (data.medicine == "exist") {
+
+                        btn.button('reset');
+
+
+                        $('#add-messages').html('<div class="alert alert-danger flat">' +
+                            '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                            '<strong><i class="fa fa-times"></i></strong> Medicine Already  Exist. </div>');
+
+                        $(".alert-danger").delay(500).show(10, function () {
+                            $(this).delay(3000).hide(10, function () {
+                                $(this).remove();
+                            });
+                        });
+                    }
+
+                    else {
                         btn.button('reset');
                         $('#add-messages').html('<div class="alert alert-warning flat">' +
                             '<button type="button" class="close" data-dismiss="alert">&times;</button>' +

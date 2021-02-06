@@ -26,6 +26,11 @@ class InsuranceController extends Controller
     public function store(Request $request){
         $pharma=Pharmacy::where('user_id','=',Auth::user()->id)->first();
 
+        $check=Insurance::where('pharmacy_id','=',$pharma->id)->where('name','=',$request['name'])->first();
+        if ($check){
+            return response()->json(['insurance' => "exist"], 200);
+        }
+
         $newInsurance = Insurance::create([
             'pharmacy_id' => $pharma->id,
             'name' => $request['name']
