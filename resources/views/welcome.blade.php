@@ -290,28 +290,28 @@
 @section('js')
 
     <script type="text/javascript">
-        // $(document).ready(function () {
-        var latlon=[];
-        var latlng;
+        $(document).ready(function () {
+            var latlon = [];
+            var latlng;
 
-        x = navigator.geolocation;
-        x.getCurrentPosition(success, failure);
+            x = navigator.geolocation;
+            x.getCurrentPosition(success, failure);
 
-        function success(position) {
-            var mylat1 = position.coords.latitude;
-            var mylong1 = position.coords.longitude;
-            $('#latitude').val(mylat1);
-            $('#longitude').val(mylong1);
-            console.log(mylong1)
-            console.log(mylat1)
-        }
+            function success(position) {
+                var mylat1 = position.coords.latitude;
+                var mylong1 = position.coords.longitude;
+                $('#latitude').val(mylat1);
+                $('#longitude').val(mylong1);
+                console.log(mylong1)
+                console.log(mylat1)
+            }
 
-        function failure() {
-            $('#body').append('<p>it doesnt work</p>');
-        }
+            function failure() {
+                $('#body').append('<p>it doesnt work</p>');
+            }
 
 
-
+        });
         </script>
 {{--    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDizvdHsyM7_maiRmbLlFn_aUEnXovHnOM&callback=initMap">--}}
 {{--    </script>--}}

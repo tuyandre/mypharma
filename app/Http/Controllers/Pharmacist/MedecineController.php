@@ -20,7 +20,8 @@ class MedecineController extends Controller
         return view('pharmacist.medecines');
     }
     public function getMedecines(){
-        $medecine = Medecine::with(['Pharmacy'])->get();
+        $pharma=Pharmacy::where('user_id','=',Auth::user()->id)->first();
+        $medecine = Medecine::with(['Pharmacy'])->where('pharmacy_id','=',$pharma->id)->get();
         return response()->json(['medecine' => $medecine], 200);
     }
     public function show($id){

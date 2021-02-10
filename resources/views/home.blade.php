@@ -10,9 +10,9 @@
         <div class="card p-2 p-lg-3 material-card">
             <div class="p-lg-3 p-2">
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-circle btn-info text-white btn-lg" href="{{route('admin.pharmacy.index')}}">
+                    <a class="btn btn-circle btn-info text-white btn-lg" href="{{route('admin.pharmacy.index')}}">
                         <i class="fa fa-hospital"></i>
-                    </button>
+                    </a>
                     <?php
                      $p=\App\Pharmacy::all();
                     ?>
@@ -32,9 +32,9 @@
         <div class="card p-2 p-lg-3 material-card">
             <div class="p-lg-3 p-2">
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-circle btn-cyan text-white btn-lg" href="{{route('admin.patient.patient')}}">
+                    <a class="btn btn-circle btn-cyan text-white btn-lg" href="{{route('admin.patient.patient')}}">
                         <i class="fa fa-users"></i>
-                    </button>
+                    </a>
                     <div class="ml-4" style="width: 38%;">
                         <h4 class="font-light">Total Patients</h4>
                         <div class="progress">
@@ -53,9 +53,9 @@
         <div class="card p-2 p-lg-3 material-card">
             <div class="p-lg-3 p-2">
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-circle btn-warning text-white btn-lg" href="{{route('admin.medecines.medecines')}}">
+                    <a class="btn btn-circle btn-warning text-white btn-lg" href="{{route('admin.medecines.medecines')}}">
                         <i class="fa fa-medkit" aria-hidden="true"></i>
-                    </button>
+                    </a>
                     <div class="ml-4" style="width: 38%;">
                         <h4 class="font-light">Total Medicines</h4>
                         <div class="progress">
@@ -78,9 +78,9 @@
             <div class="card p-2 p-lg-3 material-card">
                 <div class="p-lg-3 p-2">
                     <div class="d-flex align-items-center">
-                        <button class="btn btn-circle btn-danger text-white btn-lg" href="{{route('pharmacist.medecine.index')}}">
+                        <a class="btn btn-circle btn-danger text-white btn-lg" href="{{route('pharmacist.medecine.index')}}">
                             <i class="fa fa-medkit blue-text" aria-hidden="true"></i>
-                        </button>
+                        </a>
                         <div class="ml-4" style="width: 38%;">
                             <h4 class="font-light">Our Medicines</h4>
                             <div class="progress">
@@ -100,9 +100,9 @@
             <div class="card p-2 p-lg-3 material-card">
                 <div class="p-lg-3 p-2">
                     <div class="d-flex align-items-center">
-                        <button class="btn btn-circle btn-cyan text-white btn-lg" href="javascript:void(0)">
+                        <a class="btn btn-circle btn-cyan text-white btn-lg" href="javascript:void(0)">
                             <i class="fas fa-shopping-bag blue-text"></i>
-                        </button>
+                        </a>
                         <div class="ml-4" style="width: 38%;">
                             <h4 class="font-light">Our Orders</h4>
                             <div class="progress">
@@ -121,9 +121,9 @@
             <div class="card p-2 p-lg-3 material-card">
                 <div class="p-lg-3 p-2">
                     <div class="d-flex align-items-center">
-                        <button class="btn btn-circle btn-warning text-white btn-lg" href="javascript:void(0)">
+                        <a class="btn btn-circle btn-warning text-white btn-lg" href="javascript:void(0)">
                             <i class="fas fa-umbrella"></i>
-                        </button>
+                        </a>
                         <div class="ml-4" style="width: 38%;">
                             <h4 class="font-light">Our Insurance </h4>
                             <div class="progress">
