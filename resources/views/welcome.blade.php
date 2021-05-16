@@ -24,7 +24,7 @@
                             <ul class="animated fadeIn col-10 list-unstyled">
                                 <li>
                                     <p class="h1 blue-text mb-4 mt-5">
-                                        <strong>MEDICAL PRESCRIPTION MANAGEMENT WITH PHARMANCIES</strong>
+                                        <strong>Nearby Pharmacy Identification System NPIS</strong>
                                     </p>
                                 </li>
                             </ul>

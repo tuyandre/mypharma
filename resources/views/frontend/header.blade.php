@@ -10,7 +10,7 @@
 
             </div>
             <a class="navbar-brand font-weight-bold" href="{{url('/')}}">
-                <strong>MPMP</strong>
+                <strong>NPIS</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

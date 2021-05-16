@@ -10,7 +10,7 @@
 
                 <!--Grid column-->
                 <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                    <h6 class="mb-0 white-text">We are team of three students</h6>
+                    <h6 class="mb-0 white-text">I'm students</h6>
                 </div>
                 <!--Grid column-->
 
@@ -33,10 +33,10 @@
             <!--First column-->
             <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
                 <h6 class="text-uppercase font-weight-bold">
-                    <strong>MPMP</strong>
+                    <strong>NPIS</strong>
                 </h6>
                 <hr class="blue mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>MEDICAL PRESCRIPTION MANAGEMENT WITH PHARMANCIES.</p>
+                <p>Nearby Pharmacy Identification System NPIS.</p>
             </div>
             <!--/.First column-->
 
@@ -59,7 +59,7 @@
                 </h6>
                 <hr class="blue mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <i class="fas fa-home mr-3"></i> Kigali, Nyarugenge, CST</p>
+                    <i class="fas fa-home mr-3"></i> Kigali</p>
 
             </div>
             <!--/.Fourth column-->
